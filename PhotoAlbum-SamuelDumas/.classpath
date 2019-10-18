@@ -4,5 +4,7 @@
 	<classpathentry kind="src" path="abstracts"/>
 	<classpathentry kind="src" path="concretes"/>
 	<classpathentry kind="src" path="exceptions"/>
+	<classpathentry kind="src" path="tests"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

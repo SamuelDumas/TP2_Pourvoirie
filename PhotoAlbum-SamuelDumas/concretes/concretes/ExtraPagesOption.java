@@ -3,7 +3,7 @@ import abstracts.IComponent;
 
 public class ExtraPagesOption extends Decorator{
 	
-	private static final double PAGE_PRICE = 0.90;
+	public static final double PAGE_PRICE = 0.90;
 	private int numberOfPagesToAdd;
 
 	public ExtraPagesOption(IComponent component, int numberOfPagesToAdd) {

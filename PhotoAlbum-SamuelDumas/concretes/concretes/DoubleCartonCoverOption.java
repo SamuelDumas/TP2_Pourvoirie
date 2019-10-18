@@ -3,7 +3,7 @@ import abstracts.IComponent;
 
 public class DoubleCartonCoverOption extends Cover{
 
-	private static final double DOUBLE_CARTON_COVER_PRICE = 3.00;
+	public static final double DOUBLE_CARTON_COVER_PRICE = 3.00;
 
 	public DoubleCartonCoverOption(IComponent component) {
 		super(component);

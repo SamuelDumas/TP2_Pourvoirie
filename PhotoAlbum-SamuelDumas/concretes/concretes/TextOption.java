@@ -4,7 +4,7 @@ import exceptions.IllegalTextToAddException;
 
 public class TextOption extends Decorator{
 
-	private static final double TEXT_OPTION_PRICE = 3.00;
+	public static final double TEXT_OPTION_PRICE = 3.00;
 	private static final int MAX_CHARACTER_TO_ADD = 80;
 	String textToAdd;
 	

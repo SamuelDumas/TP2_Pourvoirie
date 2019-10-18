@@ -2,22 +2,30 @@ package concretes;
 
 import abstracts.IComponent;
 
-public class BaseAlbum implements IComponent{
+public abstract class BaseAlbum implements IComponent{
 
-	private static final int DEFAULT_PAGE_NUMBER = 24;
-	private static final double DEFAULT_PRICE = 19.99;
+	public static final int DEFAULT_PAGE_NUMBER = 24;
+	public static final double DEFAULT_PRICE = 19.99;
+	private double price;
 	int numPages;
-	Format format;
-	Orientation orientation;
 	BookColor color;
 	
 	public BaseAlbum (BookColor color) {
 		this.numPages = DEFAULT_PAGE_NUMBER;
+		this.color = color;
+		
 		
 	}
 	
+	public int getNumberOfPages() {
+		return this.numPages;
+	}
+	public BookColor getBookColor() {
+		return this.color;
+	}
+	
 	public double calculateCost() {
-		return DEFAULT_PRICE;
+		return this.price;
 	}
 	
 	
