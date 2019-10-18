@@ -1,17 +1,16 @@
 package concretes;
-import abstracts.IComponent;
+import abstracts.IPhotoAlbum;
 
 public class LeatherCoverOption extends Cover{
 
 	public static final double LEATHER_COVER_PRICE = 6.00;
-	public LeatherCoverOption(IComponent component) {
+	public LeatherCoverOption(IPhotoAlbum component) {
 		super(component);
 		// TODO Auto-generated constructor stub
 	}
 	@Override
-	public double calculateCost() {
-		return super.calculateCost() + LEATHER_COVER_PRICE;
+	public double getOptionCost() {
 		
+		return LEATHER_COVER_PRICE;
 	}
-
 }

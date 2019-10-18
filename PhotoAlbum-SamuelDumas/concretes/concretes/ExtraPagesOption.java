@@ -1,19 +1,22 @@
 package concretes;
-import abstracts.IComponent;
+import abstracts.IPhotoAlbum;
 
-public class ExtraPagesOption extends Decorator{
+public class ExtraPagesOption extends AlbumDecorator{
 	
 	public static final double PAGE_PRICE = 0.90;
 	private int numberOfPagesToAdd;
 
-	public ExtraPagesOption(IComponent component, int numberOfPagesToAdd) {
+	public ExtraPagesOption(IPhotoAlbum component, int numberOfPagesToAdd) {
 		super(component);
 		this.numberOfPagesToAdd = numberOfPagesToAdd;
 	}
+	
 	@Override
-	public double calculateCost() {
-		return super.calculateCost() + (PAGE_PRICE*numberOfPagesToAdd);
+	public double getOptionCost() {
+		
+		return this.numberOfPagesToAdd*PAGE_PRICE;
 	}
+	
 	
 	
 	

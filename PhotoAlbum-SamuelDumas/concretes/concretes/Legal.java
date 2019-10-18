@@ -10,8 +10,7 @@ public class Legal extends BaseAlbum{
 	}
 
 	@Override
-	public double calculateCost() {
+	public double getOptionCost() {
 		return LEGAL_FORMAT_PRICE;
-		
 	}
 }

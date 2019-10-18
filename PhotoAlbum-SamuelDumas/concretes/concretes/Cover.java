@@ -1,9 +1,9 @@
 package concretes;
-import abstracts.IComponent;
+import abstracts.IPhotoAlbum;
 
-public abstract class Cover extends Decorator{
+public abstract class Cover extends AlbumDecorator{
 
-	public Cover(IComponent component) {
+	public Cover(IPhotoAlbum component) {
 		super(component);
 		// TODO Auto-generated constructor stub
 	}

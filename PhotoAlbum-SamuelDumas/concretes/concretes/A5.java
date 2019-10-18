@@ -8,9 +8,10 @@ public class A5 extends BaseAlbum{
 		super(color);
 		
 	}
+	
 	@Override
 	public double calculateCost() {
-		return A5_FORMAT_PRICE;
 		
+		return A5_FORMAT_PRICE;
 	}
 }

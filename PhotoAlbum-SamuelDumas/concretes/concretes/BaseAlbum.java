@@ -1,11 +1,11 @@
 package concretes;
 
-import abstracts.IComponent;
+import abstracts.IPhotoAlbum;
 
-public abstract class BaseAlbum implements IComponent{
+public abstract class BaseAlbum implements IPhotoAlbum{
 
 	public static final int DEFAULT_PAGE_NUMBER = 24;
-	public static final double DEFAULT_PRICE = 19.99;
+	//public static final double DEFAULT_PRICE = 19.99;
 	private double price;
 	int numPages;
 	BookColor color;
@@ -26,6 +26,11 @@ public abstract class BaseAlbum implements IComponent{
 	
 	public double calculateCost() {
 		return this.price;
+	}
+
+	public double getOptionCost() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	

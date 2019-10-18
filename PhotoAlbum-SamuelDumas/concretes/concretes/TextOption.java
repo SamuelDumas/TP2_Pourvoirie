@@ -1,15 +1,15 @@
 package concretes;
-import abstracts.IComponent;
+import abstracts.IPhotoAlbum;
 import exceptions.IllegalTextToAddException;
 
-public class TextOption extends Decorator{
+public class TextOption extends AlbumDecorator{
 
 	public static final double TEXT_OPTION_PRICE = 3.00;
 	private static final int MAX_CHARACTER_TO_ADD = 80;
 	String textToAdd;
 	
 	
-	public TextOption(IComponent component, String textToAdd) {
+	public TextOption(IPhotoAlbum component, String textToAdd) {
 		super(component);
 		validateTextToAdd(textToAdd);
 	
@@ -21,8 +21,8 @@ public class TextOption extends Decorator{
 	}
 
 	@Override
-	public double calculateCost() {
-		return super.calculateCost() + TEXT_OPTION_PRICE;
+	public double getOptionCost() {
+		
+		return TEXT_OPTION_PRICE;
 	}
-
 }

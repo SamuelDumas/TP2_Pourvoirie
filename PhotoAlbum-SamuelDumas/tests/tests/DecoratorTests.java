@@ -7,8 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
 
-import abstracts.IComponent;
-import abstracts.IComponent.BookColor;
+import abstracts.IPhotoAlbum;
+import abstracts.IPhotoAlbum.BookColor;
 import concretes.A5;
 import concretes.DoubleCartonCoverOption;
 import concretes.ExtraPagesOption;
@@ -19,7 +19,7 @@ import exceptions.IllegalTextToAddException;
 
 class DecoratorTests {
 
-	private IComponent anAlbum;
+	private IPhotoAlbum anAlbum;
 	private BookColor GREY;
 	@BeforeEach
 	public void setUpAnAlbum() {
@@ -71,6 +71,17 @@ class DecoratorTests {
 		double newPrice = newAlbum.calculateCost();
 		//assert
 		assertEquals(anAlbum.calculateCost() + SwedeCoverOption.SWEDE_COVER_PRICE,newPrice);
+	}
+	@Test
+	void WHEN_albumIsCreated_THEN_addMultipleOptions_RETURNS_priceWithOptions() {
+		//arrange
+		SwedeCoverOption newAlbum = new SwedeCoverOption(anAlbum);
+		String TextToAdd = "Allo";
+		TextOption newAlbum2 = new TextOption(newAlbum, TextToAdd);
+		//action
+		double newPrice = newAlbum2.calculateCost();
+		//assert
+		assertEquals(anAlbum.calculateCost() + SwedeCoverOption.SWEDE_COVER_PRICE + TextOption.TEXT_OPTION_PRICE,newPrice);
 	}
 	@Rule
     public ExpectedException thrown = ExpectedException.none();

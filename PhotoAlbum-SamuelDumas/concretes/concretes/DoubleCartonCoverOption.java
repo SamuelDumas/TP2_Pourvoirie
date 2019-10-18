@@ -1,18 +1,18 @@
 package concretes;
-import abstracts.IComponent;
+import abstracts.IPhotoAlbum;
 
 public class DoubleCartonCoverOption extends Cover{
 
 	public static final double DOUBLE_CARTON_COVER_PRICE = 3.00;
 
-	public DoubleCartonCoverOption(IComponent component) {
+	public DoubleCartonCoverOption(IPhotoAlbum component) {
 		super(component);
 		// TODO Auto-generated constructor stub
 	}
 	@Override
-	public double calculateCost() {
-		return super.calculateCost() + DOUBLE_CARTON_COVER_PRICE;
+	public double getOptionCost() {
 		
+		return DOUBLE_CARTON_COVER_PRICE;
 	}
 
 }
